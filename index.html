@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kaushal Kumar</title>
+	<script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+	<style type="text/css">
+		.HolyGrail{
+			width: 100%:
+			height: 100%;
+			display: flex;
+			min-height: 0.1vh;
+			flex-direction: column;
+			flex-wrap: nowrap;
+			background-image: url("home.jpg");
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+		.HolyGrail-body{
+			display: flex;
+			/*flex: 1;*/
+			flex-grow: 1;
+			overflow: auto;
+		}
+		.HolyGrail-content{
+			flex: 1;
+		}
+		.HolyGrail-nav, .HolyGrail-ads{
+			flex: 0 0 10%;
+		}
+		.HolyGrail-nav{
+			order: -1;
+		}
+		.HolyGrail-head, .HolyGrail-foot{
+			flex-shrink: 0;
+		}
+		.HolyGrail-nav a{
+			text-decoration: none;
+			color: inherit;
+			text-indent: inherit;
+			text-align: justify;
+			cursor: pointer;
+			list-style: none;
+		}
+	</style>
+</head>
+<body class="HolyGrail">
+	<header class=".HolyGrail-head"><h1>Kaushal</h1><hr></header>
+	<div  class="HolyGrail-body">
+		<main class="HolyGrail-content" id="maincontent">
+
+		</main>
+		<nav class="HolyGrail-nav">
+			<ul>
+				<li><a id="ihome">Home</a></li>
+				<li><a id="iabout">About</a></li>
+				<li><a id="ieducation">Education</a></li>
+				<li><a id="icontact">Contact Me</a></li>
+			</ul>
+		</nav>
+		<aside class="HolyGrail-ads">
+			<ul>
+				<li><a href="#">Home</a></li>
+				<li><a href="#">About</a></li>
+				<li><a href="#">Clients</a></li>
+				<li><a href="#">Contact Us</a></li>
+			</ul>
+		</aside>
+	</div>
+	<footer></footer>
+	<script type="text/javascript">
+		$("#ihome").click(function(){
+			$("#maincontent").load('home.html');
+		});
+		$("#iabout").click(function(){
+			$("#maincontent").load('about.html');
+		});
+		$("#ieducation").click(function(){
+			$("#maincontent").load('education.html');
+		});
+		$("#icontact").click(function(){
+			$("#maincontent").load('contact.html');
+		});
+	</script>
+</body>
+</html>
